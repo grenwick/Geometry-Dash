@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://crll6bl0bydjb"]
+
+[ext_resource type="Texture2D" uid="uid://faehw3ow4t1q" path="res://Pixel Assets/player.svg" id="1_kuqyj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsoto"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lsoto")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kuqyj")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfxeqa1uwpsh3"]
+
+[ext_resource type="Texture2D" uid="uid://b16whkheg68x3" path="res://Pixel Assets/block.svg" id="1_rh6rj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eoaev"]
+size = Vector2(32, 32)
+
+[node name="Block" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rh6rj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_eoaev")
