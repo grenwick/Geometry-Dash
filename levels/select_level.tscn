@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://vtkv8bqmne2o"]
+[gd_scene load_steps=6 format=3 uid="uid://vtkv8bqmne2o"]
 
 [ext_resource type="Texture2D" uid="uid://borfbwbu5nflf" path="res://Static Screens/level_select.png" id="1_8yd4c"]
 [ext_resource type="PackedScene" uid="uid://bsxp3vypbvrnl" path="res://ui/level_select_button.tscn" id="2_fo4kt"]
 [ext_resource type="Script" path="res://ui/level1_select_button.gd" id="3_lgknm"]
 [ext_resource type="Script" path="res://ui/level2_select_button.gd" id="4_8vdpt"]
+[ext_resource type="Script" path="res://ui/level3_select_button.gd" id="5_aryej"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,4 +31,19 @@ text = "Level 2"
 expand_icon = true
 script = ExtResource("4_8vdpt")
 
+[node name="LevelSelectButton3" parent="." instance=ExtResource("2_fo4kt")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 372.0
+offset_top = 308.0
+offset_right = 762.0
+offset_bottom = 370.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "Level 3"
+expand_icon = true
+script = ExtResource("5_aryej")
+
 [connection signal="pressed" from="LevelSelectButton2" to="LevelSelectButton" method="_on_level_select_button_2_pressed"]
+[connection signal="pressed" from="LevelSelectButton3" to="LevelSelectButton" method="_on_level_select_button_3_pressed"]
