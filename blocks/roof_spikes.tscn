@@ -12,12 +12,14 @@ position = Vector2(0, -31)
 
 [node name="Block2" parent="." instance=ExtResource("1_6y2ss")]
 position = Vector2(64, 0)
+script = null
 
 [node name="Spike" parent="Block2" instance=ExtResource("2_r870i")]
 position = Vector2(0, -31)
 
 [node name="Block3" parent="." instance=ExtResource("1_6y2ss")]
 position = Vector2(32, 0)
+script = null
 
 [node name="Spike" parent="Block3" instance=ExtResource("2_r870i")]
 position = Vector2(0, -31)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1q1rbgusaoha"]
+[gd_scene load_steps=10 format=3 uid="uid://c1q1rbgusaoha"]
 
 [ext_resource type="Script" path="res://levels/level3.gd" id="1_6br2b"]
 [ext_resource type="PackedScene" uid="uid://bfxeqa1uwpsh3" path="res://blocks/block.tscn" id="1_n7uxm"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c13x3vyxrvn83" path="res://blocks/end_portal_back.tscn" id="6_45tu5"]
 [ext_resource type="PackedScene" uid="uid://da6wqke4fxry8" path="res://blocks/roof_spikes.tscn" id="7_d0dvu"]
 [ext_resource type="Script" path="res://blocks/end_portal_back.gd" id="7_y4akq"]
+[ext_resource type="AudioStream" uid="uid://vyp5r3316f68" path="res://Music/stereomadness.mp3" id="9_amoi8"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_6br2b")
@@ -62,7 +63,7 @@ position = Vector2(2150, -84)
 position = Vector2(49, -25)
 
 [node name="PortalBack" parent="." instance=ExtResource("6_45tu5")]
-position = Vector2(2199, -84)
+position = Vector2(2197, -84)
 script = ExtResource("7_y4akq")
 
 [node name="SpikeWall" parent="." instance=ExtResource("7_d0dvu")]
@@ -254,3 +255,7 @@ rotation = -0.785398
 [node name="Block" parent="." instance=ExtResource("1_n7uxm")]
 position = Vector2(2042, 41.9999)
 rotation = -0.785398
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_amoi8")
+autoplay = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dpxbhld5msugr"]
+[gd_scene load_steps=12 format=3 uid="uid://dpxbhld5msugr"]
 
 [ext_resource type="PackedScene" uid="uid://crll6bl0bydjb" path="res://character/character.tscn" id="1_1teox"]
 [ext_resource type="Script" path="res://levels/level2.gd" id="1_2vc1v"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://gaudyskanggr" path="res://blocks/normal_portal.tscn" id="7_2scir"]
 [ext_resource type="Script" path="res://blocks/end_portal_back.gd" id="8_eoyw0"]
 [ext_resource type="PackedScene" uid="uid://dq4milu0jr3rr" path="res://blocks/ceiling_block.tscn" id="10_xjgo3"]
+[ext_resource type="AudioStream" uid="uid://vyp5r3316f68" path="res://Music/stereomadness.mp3" id="11_g14cy"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_2vc1v")
@@ -267,3 +268,7 @@ script = ExtResource("8_eoyw0")
 
 [node name="Area2D2" parent="." instance=ExtResource("7_2scir")]
 position = Vector2(1268, -75)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_g14cy")
+autoplay = true

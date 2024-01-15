@@ -50,6 +50,7 @@ func set_def_pos():
 
 func set_phys_normal():
 	current_power_up = "normal"
+	zig_state = false
 	rotation = 0
 	ROT_SPEED = 0
 	SHORT_JUMP_VELOCITY = DEF_SHORT_JUMP_VELOCITY
