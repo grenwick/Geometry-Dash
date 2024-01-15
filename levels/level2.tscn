@@ -1,3 +1,269 @@
-[gd_scene format=3 uid="uid://b8mwr2nyppxru"]
+[gd_scene load_steps=11 format=3 uid="uid://dpxbhld5msugr"]
+
+[ext_resource type="PackedScene" uid="uid://crll6bl0bydjb" path="res://character/character.tscn" id="1_1teox"]
+[ext_resource type="Script" path="res://levels/level2.gd" id="1_2vc1v"]
+[ext_resource type="PackedScene" uid="uid://bfxeqa1uwpsh3" path="res://blocks/block.tscn" id="1_hkdyg"]
+[ext_resource type="PackedScene" uid="uid://dnppj13khqhi2" path="res://blocks/spike.tscn" id="2_0r73a"]
+[ext_resource type="PackedScene" uid="uid://dd4iluu2kiacr" path="res://blocks/inverse_portal.tscn" id="4_pmnrj"]
+[ext_resource type="PackedScene" uid="uid://kglvymxbf55d" path="res://blocks/end_portal.tscn" id="5_hf4kx"]
+[ext_resource type="PackedScene" uid="uid://c13x3vyxrvn83" path="res://blocks/end_portal_back.tscn" id="6_eg4n3"]
+[ext_resource type="PackedScene" uid="uid://gaudyskanggr" path="res://blocks/normal_portal.tscn" id="7_2scir"]
+[ext_resource type="Script" path="res://blocks/end_portal_back.gd" id="8_eoyw0"]
+[ext_resource type="PackedScene" uid="uid://dq4milu0jr3rr" path="res://blocks/ceiling_block.tscn" id="10_xjgo3"]
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_2vc1v")
+
+[node name="BlockLine" parent="." instance=ExtResource("1_hkdyg")]
+position = Vector2(336, 16)
+
+[node name="Block2" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-32, 0)
+
+[node name="Block3" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-64, 0)
+
+[node name="Block4" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-96, 0)
+
+[node name="Block5" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-128, 0)
+
+[node name="Block6" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-160, 0)
+
+[node name="Block7" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-192, 0)
+
+[node name="Block8" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-224, 0)
+
+[node name="Block9" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-256, 0)
+
+[node name="Block10" parent="BlockLine" instance=ExtResource("1_hkdyg")]
+position = Vector2(-288, 0)
+
+[node name="BlockLine5" parent="." instance=ExtResource("1_hkdyg")]
+position = Vector2(1852, 16)
+
+[node name="Block2" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-32, 0)
+
+[node name="Block3" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-64, 0)
+
+[node name="Block4" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-96, 0)
+
+[node name="Block5" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-128, 0)
+
+[node name="Block6" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-160, 0)
+
+[node name="Block7" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-192, 0)
+
+[node name="Block8" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-224, 0)
+
+[node name="Block9" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-256, 0)
+
+[node name="Block10" parent="BlockLine5" instance=ExtResource("1_hkdyg")]
+position = Vector2(-288, 0)
+
+[node name="BlockLine6" parent="." instance=ExtResource("1_hkdyg")]
+position = Vector2(1532, 16)
+
+[node name="Block2" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-32, 0)
+
+[node name="Block3" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-64, 0)
+
+[node name="Block4" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-96, 0)
+
+[node name="Block5" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-128, 0)
+
+[node name="Block6" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-160, 0)
+
+[node name="Block7" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-192, 0)
+
+[node name="Block8" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-224, 0)
+
+[node name="Block9" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-256, 0)
+
+[node name="Block10" parent="BlockLine6" instance=ExtResource("1_hkdyg")]
+position = Vector2(-288, 0)
+
+[node name="CeilingLine" parent="." instance=ExtResource("10_xjgo3")]
+position = Vector2(372, -143)
+
+[node name="Block5" parent="CeilingLine" instance=ExtResource("10_xjgo3")]
+position = Vector2(32, 0)
+
+[node name="Block6" parent="CeilingLine" instance=ExtResource("10_xjgo3")]
+position = Vector2(64, 0)
+
+[node name="Block7" parent="CeilingLine" instance=ExtResource("10_xjgo3")]
+position = Vector2(96, 0)
+
+[node name="Block8" parent="CeilingLine" instance=ExtResource("10_xjgo3")]
+position = Vector2(128, 0)
+
+[node name="CeilingLine5" parent="." instance=ExtResource("10_xjgo3")]
+position = Vector2(1012, -143)
+
+[node name="Block5" parent="CeilingLine5" instance=ExtResource("10_xjgo3")]
+position = Vector2(32, 0)
+
+[node name="Block6" parent="CeilingLine5" instance=ExtResource("10_xjgo3")]
+position = Vector2(64, 0)
+
+[node name="Block7" parent="CeilingLine5" instance=ExtResource("10_xjgo3")]
+position = Vector2(96, 0)
+
+[node name="Block8" parent="CeilingLine5" instance=ExtResource("10_xjgo3")]
+position = Vector2(128, 0)
+
+[node name="CeilingLine6" parent="." instance=ExtResource("10_xjgo3")]
+position = Vector2(1172, -143)
+
+[node name="Block5" parent="CeilingLine6" instance=ExtResource("10_xjgo3")]
+position = Vector2(32, 0)
+
+[node name="Block6" parent="CeilingLine6" instance=ExtResource("10_xjgo3")]
+position = Vector2(64, 0)
+
+[node name="Block7" parent="CeilingLine6" instance=ExtResource("10_xjgo3")]
+position = Vector2(96, 0)
+
+[node name="Block8" parent="CeilingLine6" instance=ExtResource("10_xjgo3")]
+position = Vector2(128, 0)
+
+[node name="CeilingLine2" parent="." instance=ExtResource("10_xjgo3")]
+position = Vector2(532, -143)
+
+[node name="Block5" parent="CeilingLine2" instance=ExtResource("10_xjgo3")]
+position = Vector2(32, 0)
+
+[node name="Block6" parent="CeilingLine2" instance=ExtResource("10_xjgo3")]
+position = Vector2(64, 0)
+
+[node name="Block7" parent="CeilingLine2" instance=ExtResource("10_xjgo3")]
+position = Vector2(96, 0)
+
+[node name="Block8" parent="CeilingLine2" instance=ExtResource("10_xjgo3")]
+position = Vector2(128, 0)
+
+[node name="CeilingLine3" parent="." instance=ExtResource("10_xjgo3")]
+position = Vector2(692, -143)
+
+[node name="Block5" parent="CeilingLine3" instance=ExtResource("10_xjgo3")]
+position = Vector2(32, 0)
+
+[node name="Block6" parent="CeilingLine3" instance=ExtResource("10_xjgo3")]
+position = Vector2(64, 0)
+
+[node name="Block7" parent="CeilingLine3" instance=ExtResource("10_xjgo3")]
+position = Vector2(96, 0)
+
+[node name="Block8" parent="CeilingLine3" instance=ExtResource("10_xjgo3")]
+position = Vector2(128, 0)
+
+[node name="CeilingLine4" parent="." instance=ExtResource("10_xjgo3")]
+position = Vector2(852, -143)
+
+[node name="Block5" parent="CeilingLine4" instance=ExtResource("10_xjgo3")]
+position = Vector2(32, 0)
+
+[node name="Block6" parent="CeilingLine4" instance=ExtResource("10_xjgo3")]
+position = Vector2(64, 0)
+
+[node name="Block7" parent="CeilingLine4" instance=ExtResource("10_xjgo3")]
+position = Vector2(96, 0)
+
+[node name="Block8" parent="CeilingLine4" instance=ExtResource("10_xjgo3")]
+position = Vector2(128, 0)
+
+[node name="Spike" parent="." instance=ExtResource("2_0r73a")]
+position = Vector2(272, -14)
+
+[node name="Spike2" parent="." instance=ExtResource("2_0r73a")]
+position = Vector2(1140, -39)
+rotation = -3.14159
+
+[node name="Spike3" parent="." instance=ExtResource("2_0r73a")]
+position = Vector2(917, -113)
+rotation = -3.14159
+
+[node name="Spike4" parent="." instance=ExtResource("2_0r73a")]
+position = Vector2(885, -113)
+rotation = -3.14159
+
+[node name="Spike5" parent="." instance=ExtResource("2_0r73a")]
+position = Vector2(629, -113)
+rotation = -3.14159
+
+[node name="Spike6" parent="." instance=ExtResource("2_0r73a")]
+position = Vector2(597, -113)
+rotation = -3.14159
+
+[node name="Spike7" parent="." instance=ExtResource("2_0r73a")]
+position = Vector2(564, -113)
+rotation = -3.14159
+
+[node name="RoofSpikes" parent="." instance=ExtResource("1_hkdyg")]
+position = Vector2(823, -47)
+rotation = -3.14159
+
+[node name="Block2" parent="RoofSpikes" instance=ExtResource("1_hkdyg")]
+position = Vector2(64, 0)
+
+[node name="Block3" parent="RoofSpikes" instance=ExtResource("1_hkdyg")]
+position = Vector2(32, 0)
+
+[node name="Spike" parent="RoofSpikes" instance=ExtResource("2_0r73a")]
+position = Vector2(64, 30)
+rotation = -3.14159
+
+[node name="Spike2" parent="RoofSpikes" instance=ExtResource("2_0r73a")]
+position = Vector2(32, 30)
+rotation = -3.14159
+
+[node name="Spike3" parent="RoofSpikes" instance=ExtResource("2_0r73a")]
+position = Vector2(0, 30)
+rotation = -3.14159
+
+[node name="Block" parent="." instance=ExtResource("1_hkdyg")]
+position = Vector2(1140, -69)
+
+[node name="Block2" parent="." instance=ExtResource("1_hkdyg")]
+position = Vector2(16, 16)
+
+[node name="Block3" parent="." instance=ExtResource("1_hkdyg")]
+position = Vector2(-16, 16)
+
+[node name="Area2D" parent="." instance=ExtResource("4_pmnrj")]
+position = Vector2(337, -49)
+
+[node name="EndPortal" parent="." instance=ExtResource("5_hf4kx")]
+position = Vector2(1738, -96)
+
+[node name="Player" parent="." instance=ExtResource("1_1teox")]
+position = Vector2(49, -25)
+
+[node name="PortalBack" parent="." instance=ExtResource("6_eg4n3")]
+position = Vector2(1785, -96)
+script = ExtResource("8_eoyw0")
+
+[node name="Area2D2" parent="." instance=ExtResource("7_2scir")]
+position = Vector2(1268, -75)

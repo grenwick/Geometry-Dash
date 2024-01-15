@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsxp3vypbvrnl"]
+
+[ext_resource type="Texture2D" uid="uid://bgmst3n1wsql5" path="res://Static Screens/Buttons/select_button.png" id="1_a5r35"]
+[ext_resource type="Script" path="res://ui/level_select_button.gd" id="1_ialbo"]
+
+[node name="LevelSelectButton" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = -403.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("1_a5r35")
+script = ExtResource("1_ialbo")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

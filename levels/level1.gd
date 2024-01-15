@@ -7,9 +7,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if $Player.position.y > 800:
-		$Player.position.x = 0
-		$Player.position.y = 600
+func _process(_delta):
+	if $Player.position.y > 100:
+		$Player.set_def_pos()
 	
 	

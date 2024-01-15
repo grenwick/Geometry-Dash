@@ -13,6 +13,12 @@ func _process(_delta):
 
 func _on_area_2d_body_entered(body):
 	if is_instance_of(body, CharacterBody2D):
-		body.position.y -= 20
-		body.won = true
-		
+		body.set_def_pos()
+		body.set_phys_normal()
+
+
+func _on_area_2d_2_body_entered(body):
+	if is_instance_of(body, CharacterBody2D):
+		body.rotation = 0
+		body.ROT_SPEED = 0
+		body.position.y -= 5

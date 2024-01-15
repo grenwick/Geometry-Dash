@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,8 +11,7 @@ func _process(_delta):
 	pass
 
 
-func _on_area_2d_body_entered(body):
+func _on_body_entered(body):
 	if is_instance_of(body, CharacterBody2D):
-		body.position.y -= 20
-		body.won = true
+		body.set_phys_inverted()
 		

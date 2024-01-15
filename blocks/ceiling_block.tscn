@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfxeqa1uwpsh3"]
+[gd_scene load_steps=6 format=3 uid="uid://dq4milu0jr3rr"]
 
-[ext_resource type="Script" path="res://blocks/block.gd" id="1_esgtb"]
-[ext_resource type="Texture2D" uid="uid://b16whkheg68x3" path="res://Pixel Assets/block.svg" id="1_rh6rj"]
+[ext_resource type="Script" path="res://blocks/ceiling_block.gd" id="1_ms8n1"]
+[ext_resource type="Texture2D" uid="uid://b16whkheg68x3" path="res://Pixel Assets/block.svg" id="2_1mofv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eoaev"]
 size = Vector2(32, 32)
@@ -13,10 +13,10 @@ size = Vector2(5, 22.5)
 size = Vector2(31, 14)
 
 [node name="Block" type="StaticBody2D"]
-script = ExtResource("1_esgtb")
+script = ExtResource("1_ms8n1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_rh6rj")
+texture = ExtResource("2_1mofv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_eoaev")
@@ -24,14 +24,14 @@ shape = SubResource("RectangleShape2D_eoaev")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-16, 4)
+position = Vector2(-16, -1.25)
 shape = SubResource("RectangleShape2D_5o73q")
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(22, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-21.5, 16)
+position = Vector2(-22, 48)
 shape = SubResource("RectangleShape2D_3wjpd")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
