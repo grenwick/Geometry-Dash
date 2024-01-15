@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://crll6bl0bydjb"]
+[gd_scene load_steps=4 format=3 uid="uid://crll6bl0bydjb"]
 
 [ext_resource type="Texture2D" uid="uid://faehw3ow4t1q" path="res://Pixel Assets/player.svg" id="1_kuqyj"]
+[ext_resource type="Script" path="res://character/character.gd" id="1_mrrnd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsoto"]
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_mrrnd")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lsoto")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_kuqyj")
+
+[node name="Camera2D" type="Camera2D" parent="."]

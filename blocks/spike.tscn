@@ -1,12 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnppj13khqhi2"]
+[gd_scene load_steps=4 format=3 uid="uid://dnppj13khqhi2"]
 
+[ext_resource type="Script" path="res://blocks/spike.gd" id="1_5b21m"]
 [ext_resource type="Texture2D" uid="uid://dx1pf0aawlevf" path="res://Pixel Assets/spike.svg" id="1_u1upi"]
 
-[node name="Spike" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40mqu"]
+size = Vector2(32, 2)
+
+[node name="Spike" type="StaticBody2D"]
+script = ExtResource("1_5b21m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_u1upi")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-2, -63)
-polygon = PackedVector2Array(2, 49, 17, 79, -13, 79)
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(0, -11, 11, 14, -11, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_40mqu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

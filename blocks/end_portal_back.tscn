@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c13x3vyxrvn83"]
+
+[ext_resource type="Texture2D" uid="uid://cy7gfdxxka1gv" path="res://Pixel Assets/endportal_back_half_extended.svg" id="1_q3x2i"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_q3x2i")
