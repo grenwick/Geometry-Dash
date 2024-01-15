@@ -10,15 +10,15 @@
 script = ExtResource("1_wan2r")
 
 [node name="Homescreen" type="Sprite2D" parent="."]
-position = Vector2(575, 325.5)
-scale = Vector2(0.647321, 0.643555)
+position = Vector2(963, 541.5)
+scale = Vector2(1.08036, 1.06543)
 texture = ExtResource("1_5hljh")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 8.0
-offset_top = 402.0
-offset_right = 236.0
-offset_bottom = 645.0
+offset_left = 86.0
+offset_top = 774.0
+offset_right = 314.0
+offset_bottom = 1017.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cmfb2")
 icon = ExtResource("2_cc3r0")
 

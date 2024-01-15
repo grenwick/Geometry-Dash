@@ -9,51 +9,61 @@
 [ext_resource type="PackedScene" uid="uid://bl8uvue1nevqa" path="res://ui/back_button.tscn" id="6_yc70u"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(133, 267)
+scale = Vector2(1.1, 1.1)
 script = ExtResource("1_gncmy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(575, 322.75)
-scale = Vector2(0.909598, 0.635254)
+position = Vector2(755.454, 314.793)
+scale = Vector2(1.39103, 1.11554)
 texture = ExtResource("1_8yd4c")
 
 [node name="LevelSelectButton" parent="." instance=ExtResource("2_fo4kt")]
-offset_left = 370.0
-offset_top = 172.0
-offset_right = 763.0
-offset_bottom = 234.0
+offset_left = 460.0
+offset_top = 75.0
+offset_right = 940.0
+offset_bottom = 137.0
+scale = Vector2(1.1, 1.1)
 text = "Level 1"
 expand_icon = true
 script = ExtResource("3_lgknm")
+metadata/_edit_use_anchors_ = true
 
 [node name="LevelSelectButton2" parent="." instance=ExtResource("2_fo4kt")]
-offset_left = 370.0
-offset_top = 237.0
-offset_right = 765.0
-offset_bottom = 299.0
+offset_left = 460.0
+offset_top = 188.0
+offset_right = 940.0
+offset_bottom = 250.0
+scale = Vector2(1.1, 1.1)
 text = "Level 2"
 expand_icon = true
 script = ExtResource("4_8vdpt")
+metadata/_edit_use_anchors_ = true
 
 [node name="LevelSelectButton3" parent="." instance=ExtResource("2_fo4kt")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 372.0
-offset_top = 308.0
-offset_right = 762.0
-offset_bottom = 370.0
+offset_left = 460.0
+offset_top = 314.0
+offset_right = 940.0
+offset_bottom = 376.0
 grow_horizontal = 1
 grow_vertical = 1
+scale = Vector2(1.1, 1.1)
 text = "Level 3"
 expand_icon = true
 script = ExtResource("5_aryej")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" parent="." instance=ExtResource("6_yc70u")]
-offset_left = 16.0
-offset_top = 397.0
-offset_right = 260.0
-offset_bottom = 638.0
+offset_left = -30.0
+offset_top = 445.455
+offset_right = 214.0
+offset_bottom = 686.455
+scale = Vector2(1.1, 1.1)
 action_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="LevelSelectButton2" to="LevelSelectButton" method="_on_level_select_button_2_pressed"]
 [connection signal="pressed" from="LevelSelectButton3" to="LevelSelectButton" method="_on_level_select_button_3_pressed"]
